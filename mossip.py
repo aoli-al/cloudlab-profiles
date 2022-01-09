@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Deploy Mosip in Cloudlab"""
 
 import geni.portal as portal
@@ -28,7 +25,7 @@ node.cores = 4
 node.disk = 64
 
 for i in range(9):
-    node = request.XenVM(f"mz-worker-{i}")
+    node = request.XenVM("mz-worker-" + str(i))
     node.disk_image = CENTOS_ARN
     node.ram = 16 * 1024
     node.cores = 4
