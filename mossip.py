@@ -31,13 +31,13 @@ for i in range(9):
     node.cores = 4
     node.disk = 64
 
-node = request.XenVM(f"dmz-master")
+node = request.XenVM("dmz-master")
 node.disk_image = CENTOS_ARN
 node.ram = 8 * 1024
 node.cores = 4
 node.disk = 64
 
-node = request.XenVM(f"dmz-worker")
+node = request.XenVM("dmz-worker")
 node.disk_image = CENTOS_ARN
 node.ram = 16 * 1024
 node.cores = 4
